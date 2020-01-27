@@ -74,6 +74,9 @@ font-size:1.5rem}
 
 }
 
+.list-tab {word-wrap:break-word}
+
+
 section.resume-section{padding-top:5rem!important;padding-bottom:5rem!important;max-width:75rem}
 section.resume-section .resume-item .resume-date{min-width:none}
 @media (min-width:768px){section.resume-section{min-height:100vh}
