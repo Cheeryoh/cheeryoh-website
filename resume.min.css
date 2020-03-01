@@ -74,7 +74,8 @@ font-size:1.5rem}
 
 }
 
-.list-tab {word-wrap:break-word}
+.list-tab .list-tab1 {overflow-wrap: break-word}
+
 
 
 section.resume-section{padding-top:5rem!important;padding-bottom:5rem!important;max-width:75rem}
