@@ -1,1 +1,1 @@
-Leverage bootstrap to build resume
+Showcase HTML CSS and libraries
