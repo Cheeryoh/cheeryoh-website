@@ -13,12 +13,17 @@ body {
   background-color: #f1f1f1;
   padding: 20px;
   font-family: Arial;
+
 }
 
 p {
   font-family: Arial;
   font-size: 14px;
   margin:15px;
+ 
+}
+
+span{color:#4285f4;
 }
 
 /* Center website */
@@ -30,6 +35,11 @@ p {
 h1 {
   font-size: 50px;
   word-break: break-all;
+  color:#4285f4;
+}
+
+h4 {
+	color:#4285f4;
 }
 
 
@@ -46,9 +56,10 @@ h1 {
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: right;
+  float: left;
   width: 33.33%;
   display: none; 
+  height:800px;
   
 
   /* Hide columns by default */
@@ -86,11 +97,13 @@ h1 {
   border: none;
   border-radius: 10px;
   outline: none;
-  padding: 10px;
-  width:70%;
-  background-color: white;
+  padding: 5px;
+  width:50%;
+  background-color: none;
   cursor: pointer;
   margin:2px;
+  
+
 
   
 }
@@ -155,6 +168,22 @@ img {
 text-align: center;
 }
 
+.multi-column {
+   -moz-column-count: 2;
+   -moz-column-gap: 20px;
+   -moz-column-fill: auto;
+   -webkit-column-count: 2;
+   -webkit-column-gap: 20px;
+   -webkit-column-fill: auto;
+   column-count: 2;
+   column-gap: 20px;
+   column-fill: auto;
+   list-style-position: inside;
+   font-size:11px;
+   list-style-type: none;
+}
+
+
 </style>
 </head>
 <body>
@@ -163,14 +192,15 @@ text-align: center;
 
 <h1>Justin Oh</h1>
 <hr>
-<h2 style="text-align: center">Filter responsibilities by role</h2>
+<h5 style="text-align: center">I'd say the below encompasses only about ~10% or so of my responsibilities</h5>
 
 <div  id="myBtnContainer" class="divbtncenter">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('Products')"> Milestone Technologies Google for Education Project, Product, Program Manager</button>
-  <button class="btn" onclick="filterSelection('Projects')"> Accenture Senior Data and Reporting Analyst for Google Support High Volume Contact Center</button>
-  <button class="btn" onclick="filterSelection('Dashboards')"> Accenture Google Cloud Chrome for Meetings Customer Success Lead</button>
-  <button class="btn" onclick="filterSelection('Efficiency')"> Accenture Project Coordinator Presales Device Expert</button>
+  
+  <button class="btn active" onclick="filterSelection('MilestonePgM')"> <span><b>Milestone Technologies</b></span><br> Google for Education Program Manager</button>
+  <button class="btn" onclick="filterSelection('MilestoneProject')"> <span><b>Milestone Technologies</b></span><br> Google for Education Project Manager</button>
+  <button class="btn" onclick="filterSelection('AccentureUAT')"> <span><b>Accenture</b></span><br>Sr. Data Reporting Analyst High Volume Contact Center</button>
+  <button class="btn" onclick="filterSelection('AccentureCloud')"> <span><b>Accenture</b></span><br>Google Cloud Chrome for Meetings Customer Success Lead</button>
+  <button class="btn" onclick="filterSelection('AccentureDevice')"> <span><b>Accenture</b></span><br> Project Coordinator Presales Device Expert</button>
   <button class="btn" onclick="filterSelection('Globalization')"> Outside of Work</button>
 </div>
 
@@ -179,16 +209,16 @@ text-align: center;
 <!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="round">
-    <div class="column Products">
+    <div class="column MilestonePgM">
         
           <div class="w3-container w3-col">
             
             <img src="../img/images/tc.JPG" alt="teachercenter" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
 
         </div>
-      <h4 style="text-align:center">Teacher Center Web Property</h4>
-      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+      <h4 style="text-align:center">Teacher Center</h4>
+      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:</p>
+        <ul class="multi-column">
           <li>HTML</li>
           <li>CSS</li>
           <li>OAuth2 Integration across 15+ locales</li>
@@ -205,15 +235,15 @@ text-align: center;
    </div>
 
 
-  <div class="column Products">
+  <div class="column MilestonePgM">
    
       <div class="w3-container w3-col">
         
       <img src="../img/images/certifications.png" alt="certifications" style="width:100%;cursor:pointer"onclick="onClick(this)" class="imgres w3-hover-opacity">
            </div>
-      <h4 style="text-align:center">Certifications</h4>
-      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+      <h4 style="text-align:center">Certifications Program</h4>
+      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:</p>
+        <ul class="multi-column">
           <li>SQL</li>
           <li>Big Query</li>
           <li>Dashboards</li>
@@ -230,15 +260,15 @@ text-align: center;
  
 
 
-  <div class="column Products">
+  <div class="column MilestonePgM">
    
       <div class="w3-container w3-col">
          
       <img src="../img/images/training.png" alt="training" style="width:100%;cursor:pointer"onclick="onClick(this)" class="imgres w3-hover-opacity" >
       </div>
-      <h4 style="text-align:center">Training Center</h4>
-      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+      <h4 style="text-align:center">Skillshop Training Programs</h4>
+      <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:</p>
+        <ul class="multi-column">
           <li>SQL</li>
           <li>Big Query</li>
           <li>Dashboards</li>
@@ -256,14 +286,14 @@ text-align: center;
     </div>
   
 
- <div class="column Projects">
+ <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/pilotprogramproposal.png" alt="international support" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">International Support Operations Program</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+        <ul class="multi-column">
           <li>Project Charter</li>
           <li>SOW</li>
           <li>Vendor Management</li>
@@ -277,14 +307,14 @@ text-align: center;
     </div>
   
 
-  <div class="column Projects">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/feedback.png" alt="feedback" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Feedback Integration New Web Properties</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+        <ul class="multi-column">
           <li>JavaScript</li>
           <li>HTML</li>
           <li>CSS</li>
@@ -299,14 +329,14 @@ text-align: center;
     </div>
   
 
-  <div class="column Projects">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/prodlaunch.jpg" alt="product launch" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
-      <h4 style="text-align:center">Product Launch APAC, EMEA, LATAM</h4>
+      <h4 style="text-align:center">Product Launch Global Markets - NA, APAC, EMEA, LATAM</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+        <ul class="multi-column">
           <li>Cross Functional Work Streams - Sales, Marketing, Finance</li>
           <li>Playbook documentation</li>
           <li>Partner Management</li>
@@ -315,21 +345,26 @@ text-align: center;
           <li>SQL</li>
         </ul>
       <p>Launched my products in the markets of:
-      2018: Italy
-      2019: Germany
-      2020: Korea, Indonesia
+      	<br>
+      &emsp;2018: Japan, Taiwan
+      <br>
+      &emsp;2019: Germany, Italy
+      <br>
+      &emsp;2020: Korea, Indonesia, Thailand, Indonesia
+      <br>
+      <br>
       Working cross functionally with Sales, Marketing, and Vendor Localization teams. Created and localized various sales and marketing playbooks, with the impact reach of 8 million customers.</p>
     </div>
   
 
-  <div class="column Dashboards">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/certdashboard1.png" alt="partner dashboard" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Partner Dashboards</h4>
        <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-        <ul>
+        <ul class="multi-column">
           <li>Partner Management</li>
           <li>Partner Workflows Documentation</li>
           <li>Partner Success KPI's</li>
@@ -343,14 +378,14 @@ text-align: center;
     </div>
   
 
-  <div class="column Dashboards">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/consolidatedtrackerfeedback.png" alt="feedback dashboard" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Feedback Dashboard</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Google Query Language</li>
           <li>Advanced Sheets Formulas</li>
           <li>API to Sheets integration</li>
@@ -361,14 +396,14 @@ text-align: center;
     </div>
   
 
-  <div class="column Dashboards">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/productissuehealth.png" alt="product dashboard" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Product Issue Health Dashboard</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Data Studio/Dashboards/PLX</li>
           <li>Standard SQL</li>
           <li>UX Feedback Surveys</li>
@@ -379,14 +414,14 @@ text-align: center;
     </div>
 
 
-  <div class="column Efficiency">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/emailsend.png" alt="apps script" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Gmail Mass Email Send</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Sheets</li>
           <li>Google Apps Script</li>
           <li>HTML</li>
@@ -394,14 +429,14 @@ text-align: center;
       <p>Created an internal app that sends a hard coded HTML structured email based on cell contents in a spreadsheet. Leverages HTML and Google Apps Script</p>
     </div>
 
-   <div class="column Efficiency">
+   <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/urlovertime.png" alt="automated sheets" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Tracking Feedback Based on URL</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>URL Mapping</li>
           <li>Standard/Legacy SQL</li>
           <li>PLX</li>
@@ -414,14 +449,14 @@ text-align: center;
       <p>This dashboard triages various pieces of feedback by URL (feature requests, issues) from Social Media and direct channels. No transform is done in the base data layer, rather instead, the data is loaded into Big Query (PLX equivalent), then transformed there and then extracted into one table joining multiple channels together using a common product ID key ("Consolidated"), so as to optimize load times for dashboards.</p>
     </div>
 
-  <div class="column Efficiency">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/frsheets.png" alt="JSON apps script" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">JSON Find & Replace</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Sheets & Docs</li>
           <li>Google Apps Script</li>
           <li>HTML</li>
@@ -430,14 +465,14 @@ text-align: center;
     </div>
  
 
-  <div class="column Globalization">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/kintaro.png" alt="i18n l10n integration" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Integration of i18n pipeline for l10n automation workflow</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>JavaScript</li>
           <li>Kintaro</li>
           <li>Google Translator Toolkit</li>
@@ -449,14 +484,14 @@ text-align: center;
       <p>Integrated internal 1st party CMS Kintaro with Localization Automation Workflow, using the API guide as reference. Out-of-Sync feature enabled, so that once a change is detected in English copy, that change is automatically flagged and submitted for translation, reducing the amount of manual oversight and project submissions on my part.</p>
     </div>
 
-  <div class="column Globalization">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/revcost.jpg" alt="launch estimates" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Published internal microsite of Product Launch Estimates per locale</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Kintaro</li>
           <li>HTML</li>
           <li>CSS</li>
@@ -467,14 +502,14 @@ text-align: center;
       <p>This microsite helps Sales and Marketing build their justification for approvals for international market launches. This is an itemized list of costs split by type of product, level of effort by vendor, and associated costs for translation. Various vendors utilize differing billing solutions. Some use COD's (Call off Days), others use T Shirt Sizes (Small, Medium, Large, Xtra Large), and others billable hours. These LOE's are then converted into a monetary estimate. SOW limits are included, and additional work PO's are issued for Services Rendered, but having an itemized list of costs helps my team priortize which feature requests, projects, or products to develop and launch. These costs are updated quarterly, due to dependencies across various vendors. </p>
     </div>
 
-  <div class="column Globalization">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/growthanalysis.jpg" alt="globalization strategy" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">GTM strategies - Adoption of GSFE (G Suite for Education) products international markets</h4>
        <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Start-up Guides</li>
           <li>Cross Functional Budget Overview</li>
           <li>Cross Functional Workstreams with Sales and Marketing</li>
@@ -484,14 +519,14 @@ text-align: center;
       <p>Created framework and documentation playbook on best adoption strategies for international markets. Whether to leverage EdTech partners in these regions, partner with state and governmental level MOE's/BOE's (Ministry of Education, Bureau of Education), or direct in market Googlers.</p>
     </div>
 
-  <div class="column IntlSupp">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/pilotprogramproposal.png" alt="international support program" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Launch Pilot Intl Support Program</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Desk.com</li>
           <li>SFDC Admin</li>
           <li>CUF Creation</li>
@@ -500,14 +535,14 @@ text-align: center;
       <p>Started this project with a charter, drafted a brief, finalized SOW, brought on vendor, and launched as a pilot to provide localized support for Google for Education on Jan 2019. Pilot ran through August 2019, and due to success based on KPI's, was continued for a full launch as a separate program. I currently manage this team.</p>
     </div>
 
-  <div class="column IntlSupp">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/redwood.png" alt="contact us form" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Creation and Integration of CUF to SFDC</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Desk.com</li>
           <li>SFDC Admin</li>
           <li>Redwood</li>
@@ -517,14 +552,14 @@ text-align: center;
       <p>Created an externally facing Contact us Form hosted on an internal CMS Redwood, and then integrated the custom fields into the backend of SFDC Cases (SFDC Admin) working in conjunction with various internal cross functional stakeholders. This was done so as to migrate off of the desk.com platform, leveraging SFDC as a cases intermediary, eventually loading this data into an internal CRM.</p>
     </div>
 
-  <div class="column IntlSupp">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/pilotsupportmetrics.png" alt="localized support" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Offering Localization Support</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>Localization</li>
           <li>Translation Memory</li>
           <li>Training Decks</li>
@@ -533,14 +568,14 @@ text-align: center;
       <p>Here I leveraged Google's internal translation memory to translate popular canned responses based on top user issues from support and feedback dashboards. The team then uses an proprietary translation software to assist customers in the native languages.</p>
     </div>
 
-  <div class="column IntlSupp">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/reactive.jpg" alt="reactive KPIs" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Proactive instead of Reactive KPI's</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>KPI/SLA Metric Tracking</li>
           <li>Support Translation QA</li>
           <li>Customer Journey Purchase Flow</li>
@@ -549,14 +584,14 @@ text-align: center;
       <p>This is a process improvement implemented to increase CSAT and increase full goal conversions. Same as with any product eventually cancelled for delivery, or refunded, this process proactively identifies (similar to an Abandoned Shopping Cart campaign), those who have not yet taken the exam, but let it sit in pending. Eventually after a certain period, these exams will automatically cancel. The workflow is then implemented to reach out to these customers to either reschedule their exam free of charge, or close the loop and offer refund.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/accredible.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Accredible</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>HTML</li>
           <li>Credentials Management</li>
           <li>Blockchain Verification</li>
@@ -565,14 +600,14 @@ text-align: center;
       <p>Vendor Management of credentials platform. Block chain backed certificates certifying users providing their own certifications profile</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/webassessor.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Kryterion</h4>
       <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
-      <ul>
+      <ul class="multi-column">
           <li>RESTful API Troubleshooting</li>
           <li>Exam Building & Item Banks</li>
           <li>Region Management</li>
@@ -585,13 +620,13 @@ text-align: center;
       <p>Vendor Management of registrations platform. I manage this relationship with them, and the scope of my responsibilities involve SOW renewals, Kryterion specific - RAS (request for additional services), and platform integrations across various locales to align with broader sales and marketing product launches.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/proctoru.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">ProctorU</h4>
-      <ul>
+      <ul class="multi-column">
           <li>Exam Building & Item Banks</li>
           <li>Recert/Retake Logic</li>
           <li>Voucher Administration</li>
@@ -601,13 +636,13 @@ text-align: center;
       <p>Vendor Management of registrations platform. I manage this relationship with them, and the scope of my responsibilities involve SOW renewals, Purchase Orders for vouchers, and platform integrations across various locales to align with broader sales and marketing product launches.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/examplatform.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Ancoris</h4>
-      <ul>
+      <ul class="multi-column">
           <li>RESTful API Troubleshooting</li>
           <li>Exam Building & Item Banks</li>
           <li>Region Management</li>
@@ -620,7 +655,7 @@ text-align: center;
       <p>Vendor Management of content platform hosting the certification exams. I oversee and priortize a feature backlog, leveraging Agile and Kanban methodologies and platforms such as sprints, Trello, Buganizer and Jira. Leverage HTML, CSS, and manipulate JSON files for platform content compatibility across all languages</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/kintaro.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
@@ -629,7 +664,7 @@ text-align: center;
       <p>Kintaro is an internal 1st party CMS designed for external facing content. I manage various projects, collections, schemas, and work spaces within this platform.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/redwood.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
@@ -638,7 +673,7 @@ text-align: center;
       <p>Redwood is an internal 1st party CMS designed for external KB (support) related content. I manage various projects, collections, schemas, and work spaces within this platform.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestonePgM">
     
       <div class="w3-container w3-col">
       <img src="../img/images/skillshop.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
@@ -647,7 +682,7 @@ text-align: center;
       <p>I currently oversee Skill shop content with Intellum. Here, I manage content strategy, feature requests, user experience, and localization roadmap.</p>
     </div>
 
-  <div class="column Platforms">
+  <div class="column MilestoneProject">
     
       <div class="w3-container w3-col">
       <img src="../img/images/cb.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
