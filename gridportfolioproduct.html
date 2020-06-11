@@ -65,9 +65,13 @@ h4 {
 
   /* Hide columns by default */
 }
+.columnmid {
+  float: center;
+  width: 50%;
+  display: none; 
+  height:800px;
 
-
-
+}
 
 /*.column {
    display: flex;
@@ -193,6 +197,7 @@ text-align: center;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  border-radius: 10px;
 }
 
 /* Links inside the navbar */
@@ -237,7 +242,7 @@ text-align: center;
   <button class="btn" onclick="filterSelection('AccentureUAT')"> <span><b>Accenture</b></span><br>Sr. Data Reporting Analyst High Volume Contact Center</button>
   <button class="btn" onclick="filterSelection('AccentureCloud')"> <span><b>Accenture</b></span><br>Google Cloud Chrome for Meetings Customer Success Lead</button>
   <button class="btn" onclick="filterSelection('AccentureDevice')"> <span><b>Accenture</b></span><br> Project Coordinator Presales Device Expert</button>
-  <button class="btn" onclick="filterSelection('Globalization')"> Outside of Work<br>**Coming Soon**<br> </button>
+  <button class="btn" onclick="filterSelection('Outside')"> Outside of Work<br>**Coming Soon**<br> </button>
 </div>
 
 
@@ -731,6 +736,7 @@ text-align: center;
       <img src="../img/images/proctoru.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">ProctorU</h4>
+        <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
       <ul class="multi-column">
           <li>Exam Building & Item Banks</li>
           <li>Recert/Retake Logic</li>
@@ -747,8 +753,8 @@ text-align: center;
       <img src="../img/images/examplatform.png" alt="People" style="width:100%;cursor:pointer" onclick="onClick(this)" class="imgres w3-hover-opacity">
     </div>
       <h4 style="text-align:center">Ancoris</h4>
+        <p style="text-align:center">Skills, Platforms, and Area of Expertise Leveraged:<p>
       <ul class="multi-column">
-          <li>RESTful API Troubleshooting</li>
           <li>Exam Building & Item Banks</li>
           <li>Region Management</li>
           <li>Recert/Retake Logic</li>
@@ -788,7 +794,8 @@ text-align: center;
       <h4 style="text-align:center">Project Roadmap - Incubation</h4>
       <p>I had the privilege of managing Google's Incubation Program as a Service Delivery and Data Lead. Here, Google would impart on us the support operations of their dogfood projects. Some of these actually made it to launch such as Google Assistant and Google Home, Pixel devices, Screenshare, while others were ultimately canned.</p>
     </div>
-
+      
+    </div>
 
 
 
