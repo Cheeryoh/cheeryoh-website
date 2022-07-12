@@ -1,1 +1,1 @@
-Showcase HTML CSS and libraries
+Private repository of my profile
