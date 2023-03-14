@@ -66,13 +66,11 @@
                <a href="mailto:hsoh@ucdavis.edu">hsoh@ucdavis.edu</a>
             </div>
             <p class="lead mb-5">
-            <pre>
-               TPM First. Data Engineer Second. Everything else is just a hobby. 
-               
-               Created with bootstrap.
-             </pre>
-            <br>
-            <br>I am an experienced manager of 8 years backing business decisions with data. I've managed multiple products, projects, and programs. I have achieved successful implementation and adoption of <span>SaaS</span>, <span>PaaS</span>, and <span>HaaS</span> pipelines across the globe. <br>
+               <b>TPM First. Data Engineer Second. Everything else is just a hobby.</b>
+               <b>Created with bootstrap.</b>
+               <br>
+               <br>I am an experienced manager of 8 years backing business decisions with data. I've managed multiple products, projects, and programs. I have achieved successful implementation and adoption of <span>SaaS</span>, <span>PaaS</span>, and <span>HaaS</span> pipelines across the globe.
+               <br>
             <p>Ground Control to Major Tom</p>
             <div class="social-icons">
                <a href="https://www.linkedin.com/in/heunoh/" target="blank">
@@ -351,5 +349,24 @@
       <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
       <!-- Custom scripts for this template -->
       <script src="js/resume.min.js"></script>
+      <script>
+         function myFunction() {
+           document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
    </body>
 </html>
