@@ -96,35 +96,37 @@
 <style>
 .container {
   position: relative;
-  width: 50%;
+  width: 60%;
 }
 
 .image {
+  border-radius: 55px;
   display: block;
   width: 100%;
   height: auto;
 }
 
 .overlay {
+  border-radius: 70px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
-  width: 80%;
-  opacity: 0.6;
-  transition: .5s ease;
-  background-color: #008CBA;
+  width: 100%;
+  opacity: 1;
+  transition: .8s ease;
+  background-color: #4C8BF5;
 }
 
 .container:hover .overlay {
-  opacity: 0.2;
+  opacity: 0;
 }
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -135,10 +137,10 @@
 }
 </style>
             
-         <div align="left" class="container">
-           <img src="../img/images/llama1.jpg" alt="The Problem Solver" class="image img-fluid mx-auto">
+         <div class="container">
+           <img src="../img/images/llama2.jpg" alt="The Problem Solver" class="image img-fluid mx-auto">
            <div class="overlay">
-             <div class="text">The Problem Solver: Takes ownership of challenges & leads to successful changes, either internal or external</div>
+             <div class="text">The Problem Solver:<br>Takes ownership of challenges & leads to successful changes, either internal or external</br></div>
            </div>
          </div>
            
